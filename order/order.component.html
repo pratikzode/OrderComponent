@@ -1,0 +1,51 @@
+<h1 *ngIf="status">Order Summary</h1>
+<table>
+    <thead>
+        <th>Order Number</th>
+        <th>Order Date</th>
+        <th>Customer Name</th>
+        <th>Contact Number</th>
+        <th>City</th>
+        <th>Order Status</th>
+    </thead>
+    <tbody *ngFor="let i of arr" [ngSwitch]="i.orderStatus">
+        <tr *ngSwitchCase="'Cancelled'" class="c1">
+            <td>{{i.orderNo}}</td>
+            <td>{{i.orderDate}}</td>
+            <td>{{i.customerName}}</td>
+            <td>{{i.contactNo}}</td>
+            <td>{{i.city}}</td>
+            <td>{{i.orderStatus}}</td>
+        </tr>
+        <tr *ngSwitchCase="'Pending'" class="c2">
+            <td>{{i.orderNo}}</td>
+            <td>{{i.orderDate}}</td>
+            <td>{{i.customerName}}</td>
+            <td>{{i.contactNo}}</td>
+            <td>{{i.city}}</td>
+            <td>{{i.orderStatus}}</td>
+        </tr>
+        <tr *ngSwitchCase="'Processed'" class="c3">
+            <td>{{i.orderNo}}</td>
+            <td>{{i.orderDate}}</td>
+            <td>{{i.customerName}}</td>
+            <td>{{i.contactNo}}</td>
+            <td>{{i.city}}</td>
+            <td>{{i.orderStatus}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
